@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/tabGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_home"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/main_tab_home"
+            android:text="@string/tab_home"
+            android:textColor="@color/radio_colors"/>
+
+        <RadioButton
+            android:id="@+id/tab_business"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/main_tab_business"
+            android:text="@string/tab_business"
+            android:textColor="@color/radio_colors"/>
+
+        <RadioButton
+            android:id="@+id/tab_found"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/main_tab_found"
+            android:text="@string/tab_found"
+            android:textColor="@color/radio_colors"/>
+        <RadioButton
+            android:id="@+id/tab_mine"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/main_tab_mine"
+            android:text="@string/tab_mine"
+            android:textColor="@color/radio_colors"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabGroup"
+        android:layout_alignParentTop="true">
+    </FrameLayout>
+
+</RelativeLayout>

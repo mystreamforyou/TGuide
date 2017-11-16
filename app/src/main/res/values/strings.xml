@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TGuide</string>
+
+    <string name="tab_home">首页</string>
+    <string name="tab_business">活动</string>
+    <string name="tab_found">发现</string>
+    <string name="tab_mine">我的</string>
+
+
+
+
 </resources>
