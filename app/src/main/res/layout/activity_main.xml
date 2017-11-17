@@ -20,6 +20,7 @@
         <RadioButton
             android:id="@+id/tab_home"
             style="@style/tab_style"
+            android:checked="true"
             android:drawableTop="@drawable/main_tab_home"
             android:text="@string/tab_home"
             android:textColor="@color/radio_colors"/>
