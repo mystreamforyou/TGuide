@@ -4,11 +4,12 @@ import android.app.Fragment
 import android.app.FragmentTransaction
 import android.os.Bundle
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpActivity
 import com.jack.tguide.mvp.BaseMvpPresenter
 import com.jack.tguide.mvp.BaseMvpView
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 /**
@@ -29,6 +30,19 @@ class MainActivity : BaseMvpActivity<BaseMvpView, BaseMvpPresenter<BaseMvpView>>
 
     private var currentFragment: Fragment? = null
 
+    private val onCheckedChangeListener = RadioGroup.OnCheckedChangeListener { group, checkedId ->
+        when (checkedId) {
+            R.id.tab_home -> {
+            }
+            R.id.tab_business -> {
+            }
+            R.id.tab_found -> {
+            }
+            R.id.tab_mine -> {
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,8 +50,7 @@ class MainActivity : BaseMvpActivity<BaseMvpView, BaseMvpPresenter<BaseMvpView>>
     }
 
     private fun initView() {
-
-
+        tabGroup.setOnCheckedChangeListener(onCheckedChangeListener)
 //        settingFragment = SettingFragment.newInstance()
 //        showFragment(duanziFragment)
     }
