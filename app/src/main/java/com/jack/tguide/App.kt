@@ -1,6 +1,7 @@
 package com.jack.tguide
 
 import android.app.Application
+import com.facebook.drawee.backends.pipeline.Fresco
 import com.jack.common.rest.RestUtils
 import com.jack.common.utils.ScreenUtils
 
@@ -17,6 +18,7 @@ class App : Application() {
         super.onCreate()
         ScreenUtils.init(this)
         RestUtils.init(this)
+        Fresco.initialize(this)
     }
 
 }

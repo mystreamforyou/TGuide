@@ -1,16 +1,10 @@
 package com.jack.tguide.main.home
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import com.bigkoo.convenientbanner.ConvenientBanner
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpFragment
 import kotlinx.android.synthetic.main.fragment_home.*
-import android.widget.ImageView.ScaleType
-import com.bigkoo.convenientbanner.holder.Holder
 
 
 /**
@@ -21,10 +15,11 @@ import com.bigkoo.convenientbanner.holder.Holder
  **/
 
 class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
-    override val mResId: Int get() = R.layout.fragment_home
+    override val mResId: Int get() = com.jack.tguide.R.layout.fragment_home
     override val mPresenter: HomePresenter get() = HomePresenter()
 
-    private var localImages: ArrayList<Int> = ArrayList()
+    private var localImages: MutableList<Int> = ArrayList()
+    private var titles: ArrayList<String> = ArrayList()
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -42,18 +37,24 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
     }
 
     private fun initView() {
-        var a= CBViewHolderCreator {
-            @Override
-            fun createHolder(): LocalImageHolderView {
-                return LocalImageHolderView()
-            }
-        }
-
-        convenientBanner.setPages(a, localImages)
-                .setPageIndicator(intArrayOf(R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused))
-                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT)
-//        convenientBanner.setManualPageable(false);//设置不能手动影响
-
+        //设置banner样式
+//        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE)
+        //设置图片集合
+        banner.setImages(localImages)
+        //设置图片加载器
+        banner.setImageLoader(FrescoImageLoader())
+        //设置banner动画效果
+//        banner.setBannerAnimation(Transformer.DepthPage)
+//        //设置标题集合（当banner样式有显示title时）
+//        banner.setBannerTitles(titles)
+//        //设置自动轮播，默认为true
+//        banner.isAutoPlay(true)
+//        //设置轮播时间
+//        banner.setDelayTime(1500)
+//        //设置指示器位置（当banner模式中有指示器时）
+//        banner.setIndicatorGravity(BannerConfig.CENTER)
+        //banner设置方法全部调用完毕时最后调用
+        banner.start()
     }
 
     private fun loadTestDatas() {
@@ -65,6 +66,24 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
         localImages.add(R.drawable.ic_test_4)
         localImages.add(R.drawable.ic_test_5)
         localImages.add(R.drawable.ic_test_6)
+
+        titles.add("titles 0")
+        titles.add("titles 1")
+        titles.add("titles 2")
+        titles.add("titles 3")
+        titles.add("titles 4")
+        titles.add("titles 5")
+        titles.add("titles 6")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        banner.stopAutoPlay()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        banner.startAutoPlay()
     }
 
 }
