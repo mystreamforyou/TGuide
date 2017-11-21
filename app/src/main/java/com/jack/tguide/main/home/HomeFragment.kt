@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpFragment
+import com.youth.banner.BannerConfig
+import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -38,21 +40,21 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
 
     private fun initView() {
         //设置banner样式
-//        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE)
-        //设置图片集合
-        banner.setImages(localImages)
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE)
         //设置图片加载器
         banner.setImageLoader(FrescoImageLoader())
+        //设置图片集合
+        banner.setImages(localImages)
         //设置banner动画效果
-//        banner.setBannerAnimation(Transformer.DepthPage)
+        banner.setBannerAnimation(Transformer.Default)
 //        //设置标题集合（当banner样式有显示title时）
-//        banner.setBannerTitles(titles)
+        banner.setBannerTitles(titles)
 //        //设置自动轮播，默认为true
-//        banner.isAutoPlay(true)
+        banner.isAutoPlay(true)
 //        //设置轮播时间
-//        banner.setDelayTime(1500)
+        banner.setDelayTime(1500)
 //        //设置指示器位置（当banner模式中有指示器时）
-//        banner.setIndicatorGravity(BannerConfig.CENTER)
+        banner.setIndicatorGravity(BannerConfig.CENTER)
         //banner设置方法全部调用完毕时最后调用
         banner.start()
     }
