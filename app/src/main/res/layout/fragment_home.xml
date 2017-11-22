@@ -13,6 +13,10 @@
             android:layout_height="200dp"
             app:image_scale_type="center_crop"/>
 
+        <include layout="@layout/fragment_homeactivity_smarttravel"/>
+
+        <include layout="@layout/fragment_home_functionmenu"/>
+
         <!--<com.jcodecraeer.xrecyclerview.XRecyclerView-->
         <!--android:id="@+id/rlvList"-->
         <!--android:layout_width="match_parent"-->

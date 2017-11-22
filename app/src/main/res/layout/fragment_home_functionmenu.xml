@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/home_separat_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_marginBottom="22.0dip">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_home_menu_tour" android:text="景区" android:drawableTop="@drawable/home_menu_tour" style="@style/home_menu" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_home_menu_hotel" android:text="酒店" android:drawableTop="@drawable/home_menu_hotel" style="@style/home_menu" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_home_menu_eat" android:text="美食" android:drawableTop="@drawable/home_menu_eat" style="@style/home_menu" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_home_menu_play" android:text="娱乐" android:drawableTop="@drawable/home_menu_play" style="@style/home_menu" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/tv_home_menu_trade" android:visibility="gone" android:text="出行" android:drawableTop="@drawable/home_menu_trade" style="@style/home_menu" />
+    </LinearLayout>
+    <View style="@style/home_divider_horizontal" />
+</LinearLayout>

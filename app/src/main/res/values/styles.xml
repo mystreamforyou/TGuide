@@ -27,4 +27,37 @@
         <item name="android:layout_weight">1.0</item>
     </style>
 
+    <style name="home_separat_horizontal">
+        <item name="android:background">#fff3f4f8</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">11.0dip</item>
+    </style>
+
+    <style name="home_divider_horizontal">
+        <item name="android:background">#ffe5e5e5</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="home_menu">
+        <item name="android:textSize">@dimen/textsize_thirteen</item>
+        <item name="android:textColor">@color/solid_black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/nine</item>
+    </style>
+
+    <style name="home_divider_horizontal_new">
+        <item name="android:background">#ffd4d4d4</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="home_divider_vertical_new">
+        <item name="android:background">#ffd4d4d4</item>
+        <item name="android:layout_width">0.5dip</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
 </resources>

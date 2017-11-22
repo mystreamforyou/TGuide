@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="stv_styleable">
+        <attr name="stv_src" format="reference"/>
+        <attr name="stv_tit" format="reference"/>
+        <attr name="stv_des" format="reference"/>
+    </declare-styleable>
+</resources>

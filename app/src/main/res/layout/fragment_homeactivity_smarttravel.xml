@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <View style="@style/home_separat_horizontal"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="75.0dip">
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/rl_smarttravel_voiceexplain"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            app:stv_des="@string/voiceexplain_des"
+            app:stv_src="@drawable/homeactivity_voiceexplain"
+            app:stv_tit="@string/voiceexplain"/>
+        <View style="@style/home_divider_vertical_new"/>
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/ll_smarttravel_smartmap"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            app:stv_des="@string/smartmap_des"
+            app:stv_src="@drawable/homeactivity_smartmap"
+            app:stv_tit="@string/smartmap"/>
+    </LinearLayout>
+    <View style="@style/home_divider_horizontal_new"/>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="75.0dip">
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/rl_smarttravel_talentlive"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            app:stv_des="@string/talentlive_des"
+            app:stv_src="@drawable/homeactivity_talentlive"
+            app:stv_tit="@string/talentlive"/>
+        <View style="@style/home_divider_vertical_new"/>
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/rl_smarttravel_lingyou"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            app:stv_des="@string/lingyou_des"
+            app:stv_src="@drawable/homeactivity_lingyou"
+            app:stv_tit="@string/lingyou"/>
+    </LinearLayout>
+    <View style="@style/home_divider_horizontal_new"/>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="75.0dip"
+                  android:visibility="gone">
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/rl_smarttravel_sceniclive"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"/>
+        <View style="@style/home_divider_vertical_new"/>
+        <com.jack.tguide.view.SmartTraveView
+            android:id="@id/rl_smarttravel_tripindex"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>

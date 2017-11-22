@@ -6,7 +6,13 @@
     <string name="tab_found">发现</string>
     <string name="tab_mine">我的</string>
 
-
-
+    <string name="voiceexplain">语音导游</string>
+    <string name="voiceexplain_des">景区语音讲解</string>
+    <string name="smartmap">景区地图</string>
+    <string name="smartmap_des">景区位置查询</string>
+    <string name="talentlive">导游直播</string>
+    <string name="talentlive_des">观看导游带团</string>
+    <string name="lingyou">行程助手</string>
+    <string name="lingyou_des">私人定制出行</string>
 
 </resources>

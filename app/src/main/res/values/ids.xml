@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tv_home_menu_tour">false</item>
+    <item type="id" name="tv_home_menu_hotel">false</item>
+    <item type="id" name="tv_home_menu_eat">false</item>
+    <item type="id" name="tv_home_menu_play">false</item>
+    <item type="id" name="tv_home_menu_trade">false</item>
+
+    <item type="id" name="rl_smarttravel_voiceexplain">false</item>
+    <item type="id" name="ll_smarttravel_smartmap">false</item>
+    <item type="id" name="rl_smarttravel_talentlive">false</item>
+    <item type="id" name="rl_smarttravel_lingyou">false</item>
+    <item type="id" name="rl_smarttravel_sceniclive">false</item>
+    <item type="id" name="rl_smarttravel_tripindex">false</item>
+</resources>
