@@ -60,4 +60,15 @@
         <item name="android:layout_height">fill_parent</item>
     </style>
 
+    <style name="mine_item">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/mine_item</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/menu_right__item_selector</item>
+        <item name="android:paddingLeft">13.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50.0dip</item>
+        <item name="android:drawablePadding">13.0dip</item>
+    </style>
+
 </resources>

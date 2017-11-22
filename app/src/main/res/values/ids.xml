@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item type="id" name="backbtn">false</item>
+
     <item type="id" name="tv_home_menu_tour">false</item>
     <item type="id" name="tv_home_menu_hotel">false</item>
     <item type="id" name="tv_home_menu_eat">false</item>
@@ -12,4 +14,40 @@
     <item type="id" name="rl_smarttravel_lingyou">false</item>
     <item type="id" name="rl_smarttravel_sceniclive">false</item>
     <item type="id" name="rl_smarttravel_tripindex">false</item>
+
+    <item type="id" name="rl_setting_auto_show_pic">false</item>
+    <item type="id" name="ib_setting_auto_show_pic">false</item>
+    <item type="id" name="mineActivity_tv_feedback">false</item>
+    <item type="id" name="mineActivity_tv_wifi">false</item>
+    <item type="id" name="mineActivity_tv_update">false</item>
+    <item type="id" name="mineActivity_tv_about">false</item>
+    <item type="id" name="mineActivity_tv_tuijian">false</item>
+    <item type="id" name="mineActivity_tv_clear">false</item>
+    <item type="id" name="cache_size_TextView">false</item>
+    <item type="id" name="tv_exit_login">false</item>
+
+    <item type="id" name="ibeacon_btn">false</item>
+    <item type="id" name="ibeacon_layout">false</item>
+
+    <item type="id" name="img_title_left">false</item>
+    <item type="id" name="rightbtn">false</item>
+    <item type="id" name="right_imageview">false</item>
+    <item type="id" name="right_finish">false</item>
+    <item type="id" name="layout_title">false</item>
+
+    <item type="id" name="layout_all">false</item>
+    <item type="id" name="scrollView1">false</item>
+    <item type="id" name="rl_my_order">false</item>
+    <item type="id" name="rl_change_pwd">false</item>
+    <item type="id" name="rl_opinion_feedback">false</item>
+    <item type="id" name="rl_abort_my">false</item>
+    <item type="id" name="rl_about_recruitment">false</item>
+    <item type="id" name="rl_version_wifi">false</item>
+    <item type="id" name="rl_mine_setting">false</item>
+    <item type="id" name="ll_login_and_regist">false</item>
+    <item type="id" name="tv_exit">false</item>
+    <item type="id" name="btn_login">false</item>
+    <item type="id" name="tv_username">false</item>
+    <item type="id" name="tv_user_sign">false</item>
+    <item type="id" name="fourfragment_top_headimg">false</item>
 </resources>

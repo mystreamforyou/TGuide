@@ -5,6 +5,17 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#ff60656f</color>
 
     <color name="solid_black">#ff000000</color>
+
+    <color name="vacation_filter_bg_normal">#fff0f0f0</color>
+    <color name="vacation_filter_bg_pressed">#ffbebebe</color>
+
+    <color name="mine_item">#ff444444</color>
+    <color name="milk_white">#ffe6e6e6</color>
+
+    <color name="bg_back_bg">#ffe7ecf0</color>
+    <color name="text_plain">#fffefefe</color>
 </resources>

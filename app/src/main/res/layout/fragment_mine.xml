@@ -1,12 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/root"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:ignore="MissingPrefix">
-
-
-</RelativeLayout>
+<LinearLayout android:id="@id/layout_all"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg_back_bg"
+              android:orientation="vertical">
+    <ScrollView android:id="@id/scrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical">
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="195.0dip"
+                            android:background="@drawable/bg_mine"
+                            android:padding="10.0dip">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@id/fourfragment_top_headimg"
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30.0dip"
+                    fresco:placeholderImage="@drawable/mine_default_avatar"
+                    fresco:roundAsCircle="true"/>
+                <LinearLayout android:id="@id/ll_login_and_regist"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@id/fourfragment_top_headimg"
+                              android:layout_centerInParent="true"
+                              android:layout_marginTop="10.0dip"
+                              android:orientation="vertical"
+                              android:visibility="visible">
+                    <Button android:id="@id/btn_login"
+                            android:layout_width="105.0dip"
+                            android:layout_height="30.0dip"
+                            android:background="@drawable/btn_mine_login"
+                            android:gravity="center"
+                            android:text="登录/注册"
+                            android:textColor="@color/text_plain"
+                            android:textSize="16.0sp"/>
+                    <TextView android:id="@id/tv_username"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@id/fourfragment_top_headimg"
+                              android:layout_centerInParent="true"
+                              android:textColor="@color/white"
+                              android:textSize="17.0sp"
+                              android:visibility="gone"/>
+                </LinearLayout>
+                <TextView android:id="@id/tv_user_sign"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/ll_login_and_regist"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginLeft="10.0dip"
+                          android:layout_marginTop="10.0dip"
+                          android:gravity="center"
+                          android:text="@string/mine_default_sign"
+                          android:textColor="@color/text_plain"
+                          android:textSize="12.0sp"/>
+            </RelativeLayout>
+            <TextView android:id="@id/rl_my_order"
+                      style="@style/mine_item"
+                      android:drawableLeft="@drawable/icon_mine_order" android:text="我的订单"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="0.5px"
+                      android:background="@drawable/divider_mine"/>
+            <TextView android:id="@id/rl_change_pwd"
+                      style="@style/mine_item"
+                      android:drawableLeft="@drawable/icon_mine_password"
+                      android:text="修改密码"/>
+            <TextView android:id="@id/rl_opinion_feedback"
+                      style="@style/mine_item"
+                      android:layout_marginTop="10.0dip"
+                      android:drawableLeft="@drawable/icon_mine_suggest"
+                      android:text="意见反馈"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="0.5px"
+                      android:background="@drawable/divider_mine"/>
+            <TextView android:id="@id/rl_abort_my"
+                      style="@style/mine_item"
+                      android:drawableLeft="@drawable/icon_mine_about" android:text="关于我们"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="0.5px"
+                      android:background="@drawable/divider_mine"/>
+            <TextView android:id="@id/rl_about_recruitment"
+                      style="@style/mine_item"
+                      android:drawableLeft="@drawable/icon_mine_shop"
+                      android:text="我是商家"/>
+            <TextView android:id="@id/rl_version_wifi"
+                      style="@style/mine_item"
+                      android:layout_marginTop="10.0dip"
+                      android:drawableLeft="@drawable/icon_mine_wifi"
+                      android:text="风景网WIFI"
+                      android:visibility="gone"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="0.5px"
+                      android:background="@drawable/divider_mine"
+                      android:visibility="gone"/>
+            <TextView android:id="@id/rl_mine_setting"
+                      style="@style/mine_item"
+                      android:layout_marginTop="10.0dip"
+                      android:drawableLeft="@drawable/icon_mine_setting"
+                      android:text="设置"/>
+            <TextView android:id="@id/tv_exit"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginBottom="10.0dip"
+                      android:layout_marginTop="10.0dip"
+                      android:background="@drawable/menu_right__item_selector"
+                      android:gravity="center"
+                      android:padding="10.0dip"
+                      android:text="退出登录"
+                      android:textColor="@color/mine_item"
+                      android:textSize="16.0sp"
+                      android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
