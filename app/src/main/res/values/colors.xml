@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!--分隔线-->
+    <color name="color_line">#f3f3f3</color>
+
     <color name="white">#ffffff</color>
     <color name="black">#ff000000</color>
     <color name="gray">#ff60656f</color>
@@ -18,4 +21,6 @@
 
     <color name="bg_back_bg">#ffe7ecf0</color>
     <color name="text_plain">#fffefefe</color>
+
+    <color name="prev_next_month_day_color">#ff999999</color>
 </resources>

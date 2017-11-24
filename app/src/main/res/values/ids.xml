@@ -50,4 +50,29 @@
     <item type="id" name="tv_username">false</item>
     <item type="id" name="tv_user_sign">false</item>
     <item type="id" name="fourfragment_top_headimg">false</item>
+
+    <item type="id" name="iv_recommendscenic_icon">false</item>
+    <item type="id" name="tv_recommendscenic_price">false</item>
+    <item type="id" name="tv_recommendscenic_name">false</item>
+    <item type="id" name="tv_recommendscenic_comment">false</item>
+    <item type="id" name="tv_recommendscenic_describe">false</item>
+    <item type="id" name="view_recommendscenic_separat">false</item>
+
+    <item type="id" name="rell">false</item>
+    <item type="id" name="scenery_image">false</item>
+    <item type="id" name="scenery_name">false</item>
+    <item type="id" name="scenery_levelLayout">false</item>
+    <item type="id" name="scenery_level">false</item>
+    <item type="id" name="scenery_introduction">false</item>
+    <item type="id" name="button">false</item>
+    <item type="id" name="layout">false</item>
+
+    <item type="id" name="search_content">false</item>
+    <item type="id" name="searchbtn">false</item>
+
+    <item type="id" name="homeactivity_search">false</item>
+    <item type="id" name="ll_homeactivity_city">false</item>
+    <item type="id" name="tv_homeactivity_city">false</item>
+    <item type="id" name="home_search_divider">false</item>
+    <item type="id" name="tv_homeactivity_search">false</item>
 </resources>

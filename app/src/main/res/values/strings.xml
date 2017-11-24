@@ -16,5 +16,6 @@
     <string name="lingyou_des">私人定制出行</string>
 
     <string name="mine_default_sign">旅游,从这里开始!</string>
+    <string name="home_search_hint">请输入景区名，查看景区语音导游</string>
 
 </resources>

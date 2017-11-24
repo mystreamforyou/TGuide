@@ -1,4 +1,4 @@
-package com.jack.tguide.main.scenic
+package com.jack.tguide.main.hotscenic
 
 import android.os.Bundle
 import android.view.View
@@ -12,16 +12,16 @@ import com.jack.tguide.base.BaseMvpFragment
  * Date       : 2017/11/17
  **/
 
-class ScenicFragment : BaseMvpFragment<ScenicView, ScenicPresenter>(), ScenicView {
-    override val mPresenter: ScenicPresenter
-        get() = ScenicPresenter()
+class HotScenicFragment : BaseMvpFragment<HotScenicView, HotScenicPresenter>(), HotScenicView {
+    override val mPresenter: HotScenicPresenter
+        get() = HotScenicPresenter()
     override val mResId: Int
         get() = R.layout.fragment_scenic
 
     companion object {
-        fun newInstance(): ScenicFragment {
+        fun newInstance(): HotScenicFragment {
             val args = Bundle()
-            val fragment = ScenicFragment()
+            val fragment = HotScenicFragment()
             fragment.arguments = args
             return fragment
         }

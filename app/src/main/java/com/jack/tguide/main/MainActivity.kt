@@ -7,9 +7,9 @@ import android.widget.RadioGroup
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpActivity
 import com.jack.tguide.main.home.HomeFragment
+import com.jack.tguide.main.hotscenic.HotScenicFragment
 import com.jack.tguide.main.mine.MineFragment
 import com.jack.tguide.main.news.NewsFragment
-import com.jack.tguide.main.scenic.ScenicFragment
 import com.jack.tguide.mvp.BaseMvpPresenter
 import com.jack.tguide.mvp.BaseMvpView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -59,7 +59,7 @@ class MainActivity : BaseMvpActivity<BaseMvpView, BaseMvpPresenter<BaseMvpView>>
     private fun initView() {
         tabGroup.setOnCheckedChangeListener(onCheckedChangeListener)
         homeFragment = HomeFragment.newInstance()
-        scenicFragment = ScenicFragment.newInstance()
+        scenicFragment = HotScenicFragment.newInstance()
         newsFragment = NewsFragment.newInstance()
         mineFragment = MineFragment.newInstance()
         showFragment(homeFragment)

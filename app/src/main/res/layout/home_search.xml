@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/homeactivity_search"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shape_homeactivity_search">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="48.0dip"
+                  android:gravity="center_vertical">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="31.0dip">
+            <LinearLayout android:id="@id/ll_homeactivity_city" android:layout_width="wrap_content"
+                          android:layout_height="fill_parent">
+                <TextView android:id="@id/tv_homeactivity_city" android:layout_width="wrap_content"
+                          android:layout_height="fill_parent" android:layout_centerVertical="true"
+                          android:layout_marginLeft="@dimen/fifteen"
+                          android:layout_marginRight="@dimen/fifteen"
+                          android:drawablePadding="@dimen/five"
+                          android:drawableRight="@drawable/homeactivity_change_city"
+                          android:gravity="center_vertical"
+                          android:maxEms="4" android:singleLine="true"
+                          android:text="深圳"
+                          android:textColor="@color/white"
+                          android:textSize="14.0sp"/>
+            </LinearLayout>
+            <TextView android:id="@id/tv_homeactivity_search" android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" android:layout_alignParentRight="true"
+                      android:layout_marginRight="7.0dip"
+                      android:background="@drawable/shape_homeacticity_search_bg"
+                      android:clickable="true"
+                      android:drawableLeft="@drawable/homeactivity_search"
+                      android:drawablePadding="5.0dip"
+                      android:gravity="center_vertical"
+                      android:onClick="onClick"
+                      android:text="@string/home_search_hint" android:textColor="@color/white"
+                      android:textSize="13.0sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/home_search_divider" style="@style/home_divider_horizontal"
+          android:layout_alignParentBottom="true" android:visibility="gone"/>
+</RelativeLayout>

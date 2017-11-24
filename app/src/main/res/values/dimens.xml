@@ -2,4 +2,8 @@
 <resources>
     <dimen name="textsize_thirteen">13.0sp</dimen>
     <dimen name="nine">9.0dip</dimen>
+    <dimen name="eight">8.0dip</dimen>
+    <dimen name="six">6.0dip</dimen>
+    <dimen name="fifteen">15.0dip</dimen>
+    <dimen name="five">5.0dip</dimen>
 </resources>

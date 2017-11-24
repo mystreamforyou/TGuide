@@ -1,4 +1,4 @@
-package com.jack.tguide.main.scenic
+package com.jack.tguide.main.hotscenic
 
 import com.jack.tguide.mvp.BaseMvpPresenter
 
@@ -9,7 +9,7 @@ import com.jack.tguide.mvp.BaseMvpPresenter
  * Date       : 2017/11/17
  **/
 
-class ScenicPresenter : BaseMvpPresenter<ScenicView>() {
+class HotScenicPresenter : BaseMvpPresenter<HotScenicView>() {
 
 
 
