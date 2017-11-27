@@ -7,7 +7,7 @@
 
 
     <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/scenery_image"
+        android:id="@+id/sceneryImage"
         android:layout_width="80.0dip"
         android:layout_height="80.0dip"
         android:layout_alignParentLeft="true"
@@ -20,10 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="80.0dip"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@+id/scenery_image"
+        android:layout_toRightOf="@+id/sceneryImage"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/scenery_name"
+            android:id="@+id/sceneryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -31,7 +31,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"/>
         <TextView
-            android:id="@+id/scenery_des"
+            android:id="@+id/sceneryDes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="3"

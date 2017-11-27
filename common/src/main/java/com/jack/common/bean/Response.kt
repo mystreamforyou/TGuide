@@ -11,13 +11,6 @@ import com.google.gson.annotations.SerializedName
 
 class Response<T>(
         @SerializedName("data") val datas: ArrayList<T>,
-        @SerializedName("feed_flag") val feedFlag: Int,
-        @SerializedName("has_more") val hasMore: Boolean,
-        @SerializedName("has_more_to_refresh") val hasMoreToRefresh: Boolean,
-        @SerializedName("login_status") val loginStatus: Int,
-        @SerializedName("message") val message: String,
-        @SerializedName("post_content_hint") val postContentHint: String,
-        @SerializedName("show_et_status") val showEtStatus: Int,
-        @SerializedName("tips") val tips: Tips,
-        @SerializedName("total_number") val totalNumber: Int
+        @SerializedName("code") val code: Int,
+        @SerializedName("message") val message: String
 )

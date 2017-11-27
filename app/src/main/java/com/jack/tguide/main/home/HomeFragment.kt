@@ -2,11 +2,13 @@ package com.jack.tguide.main.home
 
 import android.os.Bundle
 import android.view.View
+import com.jack.tguide.IntentStart
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpFragment
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home_functionmenu.*
 
 
 /**
@@ -36,6 +38,14 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
         super.onViewCreated(view, savedInstanceState)
         loadTestDatas()
         initView()
+        initListener()
+    }
+
+    private fun initListener() {
+        tv_home_menu_tour.setOnClickListener {
+            IntentStart.startScenic(activity)
+        }
+
     }
 
     private fun initView() {

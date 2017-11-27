@@ -3,11 +3,9 @@ package com.jack.common.rest
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import io.paperdb.Paper
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -31,7 +29,7 @@ object RestUtils {
 
     private val HTTP_READ_TIMEOUT = HTTP_CONNECT_TIMEOUT
 
-    private const val HOST_GANK: String = "http://ic.snssdk.com/api/news/feed/v66/"
+    private const val HOST_GANK: String = "http://localhost:63343/"
     var retrofitInstance: Retrofit? = null
     var CONTEXT: Context? = null
     var CLIENT: OkHttpClient? = null
@@ -47,7 +45,6 @@ object RestUtils {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(getOkHttpClient(context))
                 .build()
-        Paper.init(context)
     }
 
     internal fun getOkHttpClient(context: Context): OkHttpClient {
@@ -57,11 +54,11 @@ object RestUtils {
                 .connectTimeout(HTTP_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
                 .readTimeout(HTTP_READ_TIMEOUT, TimeUnit.MILLISECONDS)
                 .addInterceptor(getTokenInterceptor())
-        if (true) {
-            val logging = HttpLoggingInterceptor()
-            logging.level = HttpLoggingInterceptor.Level.BODY
-            builder.addInterceptor(logging)
-        }
+//        if (true) {
+//            val logging = HttpLoggingInterceptor()
+//            logging.level = HttpLoggingInterceptor.Level.BODY
+//            builder.addInterceptor(logging)
+//        }
 
         return builder.build()
     }

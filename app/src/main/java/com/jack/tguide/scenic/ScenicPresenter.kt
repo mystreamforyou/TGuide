@@ -1,8 +1,8 @@
 package com.jack.tguide.scenic
 
 import com.jack.common.api.DataApi
-import com.jack.common.bean.Data
 import com.jack.common.bean.Response
+import com.jack.common.bean.Scenic
 import com.jack.tguide.mvp.BaseMvpPresenter
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -19,9 +19,9 @@ import io.reactivex.schedulers.Schedulers
 class ScenicPresenter : BaseMvpPresenter<ScenicView>() {
 
     fun getDuanzis(isRefresh: Boolean, count: Int) {
-        DataApi.IMPL.getDuanzis(0).subscribeOn(Schedulers.newThread())
+        DataApi.IMPL.getScenics(0).subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Observer<Response<Data>> {
+                .subscribe(object : Observer<Response<Scenic>> {
                     override fun onSubscribe(d: Disposable) {
                     }
 
@@ -35,7 +35,7 @@ class ScenicPresenter : BaseMvpPresenter<ScenicView>() {
                         if (isViewAttached()) getView()!!.showError(e.message)
                     }
 
-                    override fun onNext(value: Response<Data>) {
+                    override fun onNext(value: Response<Scenic>) {
                         if (isViewAttached()) getView()!!.setData(isRefresh, value.datas)
                     }
                 })
