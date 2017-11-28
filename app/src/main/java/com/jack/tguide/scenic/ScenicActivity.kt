@@ -2,6 +2,7 @@ package com.jack.tguide.scenic
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.jack.common.bean.Scenic
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseAdapter
@@ -54,12 +55,19 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
     }
 
     override fun showRefreshEnd() {
+        rlvList.refreshComplete()
     }
 
     override fun setData(isRefresh: Boolean, datas: List<Scenic>) {
-        adapter.update(datas)
+        Log.i("DataApi", "isRefresh " + isRefresh + " Data size " + datas.size)
+        if (isRefresh) {
+            adapter.update(datas)
+        } else {
+            adapter.add(datas)
+        }
     }
 
     override fun showLoadMoreEnd() {
+        rlvList.loadMoreComplete()
     }
 }
