@@ -17,5 +17,12 @@
 
     <string name="mine_default_sign">旅游,从这里开始!</string>
     <string name="home_search_hint">请输入景区名，查看景区语音导游</string>
+    <string name="search_hint">输入景区、酒店、餐饮、特产店等</string>
+
+    <string name="pop_default_circle">全部商圈</string>
+    <string name="pop_tour_main">全部</string>
+    <string name="pop_default_sort">默认排序</string>
+    <string name="pop_region_sort">区域</string>
+
 
 </resources>

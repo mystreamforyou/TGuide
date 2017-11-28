@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="42.0dip" android:layout_alignParentTop="true"
+              android:background="@color/white" android:baselineAligned="false"
+              android:orientation="horizontal">
+    <RelativeLayout android:id="@+id/pop_region_sort" android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@+id/region_sort" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_centerInParent="true"
+                  android:drawablePadding="3.0dip"
+                  android:drawableRight="@drawable/business_menu_selector"
+                  android:ellipsize="end" android:singleLine="true"
+                  android:text="@string/pop_region_sort"
+                  android:textColor="@color/business_menu_text_selector" android:textSize="14.0sp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/pop_default_sort" android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@+id/default_sort" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_centerInParent="true"
+                  android:drawablePadding="3.0dip"
+                  android:drawableRight="@drawable/business_menu_selector"
+                  android:ellipsize="end" android:singleLine="true"
+                  android:text="@string/pop_default_sort"
+                  android:textColor="@color/business_menu_text_selector" android:textSize="14.0sp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/pop_default_circle" android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@+id/default_circle" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_centerInParent="true"
+                  android:drawablePadding="3.0dip"
+                  android:drawableRight="@drawable/business_menu_selector" android:ellipsize="end"
+                  android:gravity="center" android:singleLine="true"
+                  android:text="@string/pop_default_circle"
+                  android:textColor="@color/business_menu_text_selector" android:textSize="14.0sp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/pop_default_filtrate" android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@+id/default_filtrate" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_centerInParent="true"
+                  android:drawablePadding="3.0dip"
+                  android:drawableRight="@drawable/business_menu_selector" android:ellipsize="end"
+                  android:gravity="center" android:singleLine="true"
+                  android:text="@string/pop_tour_main"
+                  android:textColor="@color/business_menu_text_selector" android:textSize="14.0sp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -18,17 +18,6 @@ import kotlinx.android.synthetic.main.activity_scenic.*
  **/
 
 class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicView {
-    override fun showRefreshEnd() {
-    }
-
-    override fun setData(isRefresh: Boolean, datas: List<Scenic>) {
-
-
-
-    }
-
-    override fun showLoadMoreEnd() {
-    }
 
     override var mPresenter: ScenicPresenter = ScenicPresenter()
 
@@ -62,5 +51,15 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
 
     private fun initData() {
         mPresenter.getDuanzis(true, 0)
+    }
+
+    override fun showRefreshEnd() {
+    }
+
+    override fun setData(isRefresh: Boolean, datas: List<Scenic>) {
+        adapter.update(datas)
+    }
+
+    override fun showLoadMoreEnd() {
     }
 }

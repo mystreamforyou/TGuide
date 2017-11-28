@@ -71,4 +71,14 @@
         <item name="android:drawablePadding">13.0dip</item>
     </style>
 
+    <style name="city_item_bar">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff999999</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/comm_new_bg</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">26.0dip</item>
+    </style>
+
 </resources>

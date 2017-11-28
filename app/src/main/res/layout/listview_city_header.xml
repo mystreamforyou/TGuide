@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" android:layout_marginBottom="10.0dip"
+             android:background="@color/white"
+             android:orientation="vertical">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:orientation="vertical">
+        <LinearLayout android:id="@id/localLayout" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" android:gravity="center_vertical"
+                      android:orientation="vertical">
+            <TextView android:id="@id/locationCityText" style="@style/city_item_bar"
+                      android:text="当前定位城市"/>
+            <LinearLayout android:id="@id/locationCityLinearLayout"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="10.0dip"
+                          android:layout_marginLeft="15.0dip"
+                          android:layout_marginTop="10.0dip"
+                          android:background="@drawable/bg_city_loaction"
+                          android:clickable="true"
+                          android:focusable="true"
+                          android:gravity="center"
+                          android:minWidth="100.0dip"
+                          android:orientation="horizontal">
+                <TextView android:id="@id/locationCity"
+                          android:layout_width="wrap_content"
+                          android:layout_height="31.0dip"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="center_vertical"
+                          android:textColor="@color/comm_main_text"
+                          android:textSize="14.0sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/historySearchLayout" android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" android:orientation="vertical"
+                      android:visibility="gone">
+            <TextView android:id="@id/lishi_text" style="@style/city_item_bar" android:text="历史"/>
+            <!--<cn.area.photo.widget.MyGridView android:id="@id/show_historysearch_listView"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="15.0dip"-->
+            <!--android:layout_marginLeft="15.0dip"-->
+            <!--android:layout_marginTop="15.0dip"-->
+            <!--android:horizontalSpacing="15.0dip"-->
+            <!--android:listSelector="@color/gray_light"-->
+            <!--android:numColumns="3"-->
+            <!--android:scrollbars="none"-->
+            <!--android:verticalSpacing="15.0dip"/>-->
+            <TextView android:id="@id/clearHistoryButton" android:layout_width="wrap_content"
+                      android:layout_height="30.0dip" android:layout_gravity="center"
+                      android:layout_marginBottom="10.0dip" android:clickable="true"
+                      android:gravity="center" android:paddingBottom="5.0dip"
+                      android:paddingLeft="8.0dip" android:paddingRight="8.0dip"
+                      android:paddingTop="5.0dip" android:text="清除历史记录"
+                      android:textColor="@color/comm_main_text" android:textSize="14.0sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@id/ll_hot_city_container" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@id/tv_hot_city" style="@style/city_item_bar"
+                      android:text="热门城市"/>
+            <!--<cn.area.photo.widget.MyGridView android:id="@id/gv_hot_city"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="15.0dip"-->
+            <!--android:layout_marginLeft="15.0dip"-->
+            <!--android:layout_marginTop="15.0dip"-->
+            <!--android:horizontalSpacing="15.0dip"-->
+            <!--android:listSelector="@color/gray_light"-->
+            <!--android:numColumns="3"-->
+            <!--android:scrollbars="none"-->
+            <!--android:verticalSpacing="15.0dip"/>-->
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
