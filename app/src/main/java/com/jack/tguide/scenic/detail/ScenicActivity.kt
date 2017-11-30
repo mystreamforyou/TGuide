@@ -2,9 +2,8 @@ package com.jack.tguide.scenic.detail
 
 import android.os.Bundle
 import android.util.Log
-import com.jack.common.bean.Scenic
+import com.jack.common.bean.ScenicDetail
 import com.jack.tguide.R
-import com.jack.tguide.base.BaseAdapter
 import com.jack.tguide.base.BaseMvpActivity
 
 /**
@@ -15,15 +14,13 @@ import com.jack.tguide.base.BaseMvpActivity
  **/
 
 class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicView {
-    override fun showRefreshEnd() {
+    override fun showLoadStart() {
     }
 
-    override fun showLoadMoreEnd() {
+    override fun showLoadEnd() {
     }
 
     override var mPresenter: ScenicPresenter = ScenicPresenter()
-
-    private lateinit var adapter: BaseAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,14 +33,10 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
     }
 
     private fun initData() {
+        mPresenter.getScenicDetail("1")
     }
 
-    override fun setData(isRefresh: Boolean, datas: List<Scenic>) {
-        Log.i("DataApi", "isRefresh " + isRefresh + " Data size " + datas.size)
-        if (isRefresh) {
-            adapter.update(datas)
-        } else {
-            adapter.add(datas)
-        }
+    override fun setData(data: ScenicDetail) {
+        Log.i("DataApi", "ScenicDetail " + data.toString())
     }
 }

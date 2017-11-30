@@ -18,10 +18,10 @@ import io.reactivex.schedulers.Schedulers
 
 class ScenicListPresenter : BaseMvpPresenter<ScenicListView>() {
 
-    fun getDuanzis(isRefresh: Boolean, count: Int) {
+    fun getScenics(isRefresh: Boolean, count: Int) {
         DataApi.IMPL.getScenics(0).subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Observer<Response<Scenic>> {
+                .subscribe(object : Observer<Response<ArrayList<Scenic>>> {
                     override fun onSubscribe(d: Disposable) {
                     }
 
@@ -35,8 +35,8 @@ class ScenicListPresenter : BaseMvpPresenter<ScenicListView>() {
                         if (isViewAttached()) getView()!!.showError(e.message)
                     }
 
-                    override fun onNext(value: Response<Scenic>) {
-                        if (isViewAttached()) getView()!!.setData(isRefresh, value.datas)
+                    override fun onNext(value: Response<ArrayList<Scenic>>) {
+                        if (isViewAttached()) getView()!!.setData(isRefresh, value.data)
                     }
                 })
 

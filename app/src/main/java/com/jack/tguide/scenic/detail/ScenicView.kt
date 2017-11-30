@@ -1,6 +1,6 @@
 package com.jack.tguide.scenic.detail
 
-import com.jack.common.bean.Scenic
+import com.jack.common.bean.ScenicDetail
 import com.jack.tguide.mvp.BaseMvpView
 
 /**
@@ -11,10 +11,10 @@ import com.jack.tguide.mvp.BaseMvpView
  **/
 
 interface ScenicView : BaseMvpView {
-    fun showRefreshEnd()
+    fun showLoadStart()
 
-    fun setData(isRefresh: Boolean, datas: List<Scenic>)
+    fun setData(data: ScenicDetail)
 
-    fun showLoadMoreEnd()
+    fun showLoadEnd()
 
 }

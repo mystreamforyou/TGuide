@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName
  **/
 
 class Response<T>(
-        @SerializedName("data") val datas: ArrayList<T>,
+        @SerializedName("data") val data: T,
         @SerializedName("code") val code: Int,
         @SerializedName("message") val message: String
 )

@@ -42,18 +42,18 @@ class ScenicListActivity : BaseMvpActivity<ScenicListView, ScenicListPresenter>(
 
         rlvList.setLoadingListener(object : XRecyclerView.LoadingListener {
             override fun onLoadMore() {
-                mPresenter.getDuanzis(false, 0)
+                mPresenter.getScenics(false, 0)
             }
 
             override fun onRefresh() {
-                mPresenter.getDuanzis(true, 0)
+                mPresenter.getScenics(true, 0)
             }
         })
         initData()
     }
 
     private fun initData() {
-        mPresenter.getDuanzis(true, 0)
+        mPresenter.getScenics(true, 0)
     }
 
     override fun showRefreshEnd() {
