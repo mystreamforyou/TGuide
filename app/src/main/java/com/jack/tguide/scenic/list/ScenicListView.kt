@@ -1,4 +1,4 @@
-package com.jack.tguide.scenic
+package com.jack.tguide.scenic.list
 
 import com.jack.common.bean.Scenic
 import com.jack.tguide.mvp.BaseMvpView
@@ -10,7 +10,7 @@ import com.jack.tguide.mvp.BaseMvpView
  * Date       : 2017/11/17
  **/
 
-interface ScenicView : BaseMvpView {
+interface ScenicListView : BaseMvpView {
     fun showRefreshEnd()
 
     fun setData(isRefresh: Boolean, datas: List<Scenic>)

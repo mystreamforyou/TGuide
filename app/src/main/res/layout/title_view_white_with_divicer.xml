@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_webview_title"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip" android:layout_alignParentTop="true"
+                android:background="@drawable/title_bg_with_divider"
+                android:paddingBottom="0.5dip">
+    <ImageView android:id="@+id/backbtn" android:layout_width="wrap_content"
+               android:layout_height="50.0dip" android:layout_centerVertical="true"
+               android:paddingLeft="16.0dip" android:paddingRight="16.0dip"
+               android:src="@drawable/icon_black_back"/>
+    <TextView android:id="@+id/nav_title_tv" android:layout_width="wrap_content"
+              android:layout_height="fill_parent" android:layout_toLeftOf="@+id/rightbtn"
+              android:layout_toRightOf="@+id/backbtn"
+              android:ellipsize="end" android:gravity="center"
+              android:singleLine="true" android:textColor="@color/hide_provenance_color"
+              android:textSize="18.0dip"/>
+    <Button android:id="@+id/rightbtn" android:layout_width="wrap_content"
+            android:layout_height="fill_parent" android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null" android:padding="10.0dip"
+            android:text="关闭" android:textColor="@color/home_text_gray"
+            android:textSize="14.0sp" android:visibility="invisible"/>
+    <ImageView android:id="@+id/iv_share" android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:layout_alignParentRight="true" android:layout_centerVertical="true"
+               android:padding="10.0dip"
+               android:src="@drawable/menu_right__share_selector" android:visibility="invisible"/>
+</RelativeLayout>

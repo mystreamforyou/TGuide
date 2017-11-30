@@ -1,4 +1,4 @@
-package com.jack.tguide.scenic
+package com.jack.tguide.scenic.list
 
 import android.view.LayoutInflater
 import android.view.View

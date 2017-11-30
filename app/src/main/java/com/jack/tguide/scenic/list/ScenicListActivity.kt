@@ -1,9 +1,10 @@
-package com.jack.tguide.scenic
+package com.jack.tguide.scenic.list
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.jack.common.bean.Scenic
+import com.jack.tguide.IntentStart
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseAdapter
 import com.jack.tguide.base.BaseMvpActivity
@@ -18,9 +19,9 @@ import kotlinx.android.synthetic.main.activity_scenic.*
  * Date       : 2017/11/23
  **/
 
-class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicView {
+class ScenicListActivity : BaseMvpActivity<ScenicListView, ScenicListPresenter>(), ScenicListView {
 
-    override var mPresenter: ScenicPresenter = ScenicPresenter()
+    override var mPresenter: ScenicListPresenter = ScenicListPresenter()
 
     private lateinit var adapter: BaseAdapter
 
@@ -35,6 +36,7 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
         rlvList.addItemDecoration(RecyclerDivider(this))
         adapter = BaseAdapter()
                 .with(Scenic::class.java, ScenicBinder().clickWith({ item, _ ->
+                    IntentStart.startScenicDetail(this)
                 }))
         rlvList.adapter = adapter
 

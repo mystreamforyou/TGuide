@@ -43,7 +43,7 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
 
     private fun initListener() {
         tv_home_menu_tour.setOnClickListener {
-            IntentStart.startScenic(activity)
+            IntentStart.startScenicList(activity)
         }
 
     }

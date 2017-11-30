@@ -27,6 +27,7 @@
         </activity>
 
         <activity android:name=".main.MainActivity"/>
-        <activity android:name=".scenic.ScenicActivity"/>
+        <activity android:name=".scenic.list.ScenicListActivity"/>
+        <activity android:name=".scenic.detail.ScenicActivity"/>
     </application>
 </manifest>

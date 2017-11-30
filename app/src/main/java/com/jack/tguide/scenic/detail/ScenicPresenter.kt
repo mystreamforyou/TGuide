@@ -1,4 +1,4 @@
-package com.jack.tguide.scenic
+package com.jack.tguide.scenic.detail
 
 import com.jack.common.api.DataApi
 import com.jack.common.bean.Response

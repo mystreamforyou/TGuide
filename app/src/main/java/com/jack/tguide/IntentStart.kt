@@ -2,7 +2,8 @@ package com.jack.tguide
 
 import android.app.Activity
 import android.content.Intent
-import com.jack.tguide.scenic.ScenicActivity
+import com.jack.tguide.scenic.detail.ScenicActivity
+import com.jack.tguide.scenic.list.ScenicListActivity
 
 /**
  * Description: TGuide
@@ -13,7 +14,11 @@ import com.jack.tguide.scenic.ScenicActivity
 
 object IntentStart {
 
-    fun startScenic(act: Activity) {
+    fun startScenicList(act: Activity) {
+        val i = Intent(act, ScenicListActivity::class.java)
+        act.startActivity(i)
+    }
+    fun startScenicDetail(act: Activity) {
         val i = Intent(act, ScenicActivity::class.java)
         act.startActivity(i)
     }

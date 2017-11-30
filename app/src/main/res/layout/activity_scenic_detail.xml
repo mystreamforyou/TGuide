@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/main_relLay"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:panel="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white">
+    <include android:id="@+id/layout_title" layout="@layout/title_view_white_with_divicer"/>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_title">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="5.0dip">
+            <ImageView android:layout_width="fill_parent"
+                       android:layout_height="150.0dip"
+                       android:background="@color/vacation_filter_bg_normal"
+                       android:scaleType="fitCenter" android:src="@drawable/view_logo"/>
+            <ImageView android:id="@+id/scenicpic" android:layout_width="fill_parent"
+                       android:layout_height="150.0dip" android:background="@color/transparent"
+                       android:onClick="scenicPhoto" android:scaleType="centerCrop"/>
+            <TextView android:id="@+id/photo_count_TextView" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignBottom="@+id/scenicpic"
+                      android:layout_alignRight="@+id/scenicpic"
+                      android:layout_marginBottom="5.0dip"
+                      android:layout_marginRight="10.0dip"
+                      android:textColor="@color/white"
+                      android:textSize="14.0sp"/>
+            <RelativeLayout android:id="@+id/scenic_Layout" android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/scenicpic"
+                            android:background="#ffe0e0e0"
+                            android:paddingBottom="2.0dip">
+                <TextView android:id="@+id/scenicGrade" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_centerVertical="true"
+                          android:layout_marginLeft="10.0dip" android:text="国家5A景区"
+                          android:textColor="@color/gray" android:textSize="14.0sp"/>
+                <TextView android:id="@+id/scenicnumpop" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_centerVertical="true"
+                          android:layout_marginLeft="20.0dip"
+                          android:layout_toRightOf="@+id/scenicGrade"
+                          android:text="0人收听" android:textColor="#ffe60012"
+                          android:textSize="14.0sp"/>
+                <Button android:id="@+id/listenBtn" android:layout_width="90.0dip"
+                        android:layout_height="36.0dip" android:layout_alignParentRight="true"
+                        android:layout_marginRight="10.0dip" android:layout_marginTop="8.0dip"
+                        android:background="@drawable/ticket_info_play"
+                        android:drawablePadding="3.0dip"
+                        android:onClick="listen" android:padding="2.0dip"
+                        android:textColor="@color/white" android:textSize="14.0sp"/>
+            </RelativeLayout>
+            <LinearLayout android:id="@+id/scenic_Layout02" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/scenic_Layout"
+                          android:layout_marginTop="5.0dip"
+                          android:orientation="horizontal">
+                <Button android:id="@+id/voice_comment_btn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1.0"
+                        android:background="@null" android:drawablePadding="5.0dip"
+                        android:drawableTop="@drawable/voice_comment_btn_bg"
+                        android:onClick="comment"
+                        android:text="点评"
+                        android:textColor="@color/gray" android:textSize="12.0sp"
+                        android:visibility="gone"/>
+                <Button android:id="@+id/voice_img_btn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1.0"
+                        android:background="@null" android:drawablePadding="5.0dip"
+                        android:drawableTop="@drawable/voice_img_btn_bg"
+                        android:onClick="scenicPhoto"
+                        android:text="图片" android:textColor="@color/gray"
+                        android:textSize="12.0sp"/>
+                <Button android:id="@+id/voice_intro_btn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1.0"
+                        android:background="@null" android:drawablePadding="5.0dip"
+                        android:drawableTop="@drawable/voice_intro_btn_bg" android:onClick="intro"
+                        android:text="简介" android:textColor="@color/gray"
+                        android:textSize="12.0sp"/>
+                <Button android:id="@+id/voice_collect_btn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1.0"
+                        android:background="@null" android:drawablePadding="5.0dip"
+                        android:drawableTop="@drawable/voice_nav_collect" android:onClick="collect"
+                        android:text="收藏"
+                        android:textColor="@color/gray" android:textSize="12.0sp"
+                        android:visibility="gone"/>
+                <Button android:id="@+id/voice_voice_map_btn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1.0"
+                        android:background="@null" android:drawablePadding="5.0dip"
+                        android:drawableTop="@drawable/voice_tourist_btn_bg" android:text="导游图"
+                        android:textColor="@color/gray" android:textSize="12.0sp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/voice_ticket_Layout" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/scenic_Layout02"
+                          android:layout_marginTop="5.0dip"
+                          android:background="@color/vacation_filter_bg_normal"
+                          android:orientation="vertical"
+                          android:visibility="gone">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                          android:layout_margin="0.5dip" android:padding="10.0dip"
+                          android:text="门票" android:textColor="@color/juhong_normal"
+                          android:textSize="16.0sp"/>
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="0.5dip"
+                           android:background="@color/vacation_filter_bg_pressed"
+                           android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/address_Layout" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/voice_ticket_Layout"
+                          android:layout_marginTop="10.0dip"
+                          android:orientation="vertical">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                          android:background="@color/vacation_filter_bg_normal"
+                          android:padding="10.0dip" android:text="交通"
+                          android:textColor="@color/juhong_normal" android:textSize="16.0sp"/>
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="0.5dip"
+                           android:background="@color/vacation_filter_bg_pressed"
+                           android:visibility="gone"/>
+                <Button android:id="@+id/scenic_address_intro" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vacation_search_filter_btn_bg"
+                        android:drawableLeft="@drawable/voice_address_img"
+                        android:drawablePadding="2.0dip"
+                        android:drawableRight="@drawable/common_btn_arrow"
+                        android:gravity="center|left" android:onClick="goToMap"
+                        android:padding="10.0dip"
+                        android:text="地址"
+                        android:textColor="@color/gray" android:textSize="14.0sp"/>
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="0.5dip"
+                           android:background="@color/vacation_filter_bg_pressed"
+                           android:visibility="gone"/>
+                <Button android:id="@+id/guidlayoutjiaotong" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vacation_search_filter_btn_bg"
+                        android:drawableLeft="@drawable/voice_riding_img"
+                        android:drawablePadding="2.0dip"
+                        android:drawableRight="@drawable/common_btn_arrow"
+                        android:gravity="left" android:onClick="jiaotong"
+                        android:padding="10.0dip"
+                        android:text="乘车指南"
+                        android:textColor="@color/gray" android:textSize="14.0sp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/zhoubian_Layout" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/address_Layout"
+                          android:layout_marginTop="10.0dip" android:orientation="vertical"
+                          android:visibility="gone">
+                <Button android:id="@+id/guidlayoutzhoubian" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vacation_search_filter_btn_bg"
+                        android:drawableLeft="@drawable/voice_circum_img"
+                        android:drawablePadding="2.0dip"
+                        android:drawableRight="@drawable/common_btn_arrow"
+                        android:gravity="left" android:onClick="surround"
+                        android:padding="10.0dip" android:text="周边"
+                        android:textColor="@color/gray"
+                        android:textSize="14.0sp" android:visibility="gone"/>
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="0.5dip"
+                           android:background="@color/vacation_filter_bg_pressed"
+                           android:visibility="gone"/>
+                <Button android:id="@+id/guidlayoutyouji" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vacation_search_filter_btn_bg"
+                        android:drawableLeft="@drawable/voice_youji_img"
+                        android:drawablePadding="2.0dip"
+                        android:drawableRight="@drawable/common_btn_arrow"
+                        android:gravity="left" android:onClick="youjigonglue"
+                        android:padding="10.0dip" android:text="游记攻略"
+                        android:textColor="@color/gray"
+                        android:textSize="14.0sp" android:visibility="gone"/>
+                <ImageView android:layout_width="fill_parent"
+                           android:layout_height="0.5dip"
+                           android:background="@color/vacation_filter_bg_pressed"
+                           android:visibility="gone"/>
+                <Button android:id="@+id/guidlayoutminsu" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vacation_search_filter_btn_bg"
+                        android:drawableLeft="@drawable/voice_minsu_img"
+                        android:drawablePadding="2.0dip"
+                        android:drawableRight="@drawable/common_btn_arrow"
+                        android:gravity="left" android:onClick="wenhuaminsu"
+                        android:padding="10.0dip" android:text="游记攻略和民俗文化"
+                        android:textColor="@color/gray"
+                        android:textSize="14.0sp" android:visibility="gone"/>
+            </LinearLayout>
+            <TextView android:id="@+id/voice_comment_count" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/zhoubian_Layout"
+                      android:layout_marginTop="10.0dip"
+                      android:background="@drawable/vacation_search_filter_btn_bg"
+                      android:padding="8.0dip" android:text="共0条点评"
+                      android:textColor="@color/gray" android:textSize="14.0sp"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

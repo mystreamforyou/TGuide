@@ -25,4 +25,8 @@
     <color name="prev_next_month_day_color">#ff999999</color>
     <color name="comm_new_bg">#fff5f5f5</color>
     <color name="comm_main_text">#fffd8c26</color>
+
+    <color name="hide_provenance_color">#ff333333</color>
+    <color name="home_text_gray">#ff666666</color>
+    <color name="juhong_normal">#fff86616</color>
 </resources>
