@@ -5,6 +5,8 @@ import android.util.Log
 import com.jack.common.bean.ScenicDetail
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpActivity
+import com.jack.tguide.scenic.ScenicContant
+import kotlinx.android.synthetic.main.title_view_white_with_divicer.*
 
 /**
  * Description: TGuide
@@ -14,6 +16,9 @@ import com.jack.tguide.base.BaseMvpActivity
  **/
 
 class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicView {
+
+    private var scenicId: String = "-1"
+
     override fun showLoadStart() {
     }
 
@@ -29,7 +34,18 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
     }
 
     fun initView() {
+
+
+        initTitle()
         initData()
+    }
+
+    private fun initTitle() {
+        val b: Bundle = intent.extras.get("bundle") as Bundle
+        scenicId = b.get(ScenicContant.SCENIC_ID).toString()
+        val scenicName = b.get(ScenicContant.SCENIC_NAME).toString()
+        nav_title_tv.text = scenicName
+        backbtn.setOnClickListener { finish() }
     }
 
     private fun initData() {
@@ -38,5 +54,7 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
 
     override fun setData(data: ScenicDetail) {
         Log.i("DataApi", "ScenicDetail " + data.toString())
+
+
     }
 }

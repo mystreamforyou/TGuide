@@ -8,6 +8,7 @@ import com.jack.tguide.IntentStart
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseAdapter
 import com.jack.tguide.base.BaseMvpActivity
+import com.jack.tguide.scenic.ScenicContant
 import com.jack.tguide.view.RecyclerDivider
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import kotlinx.android.synthetic.main.activity_scenic.*
@@ -36,7 +37,10 @@ class ScenicListActivity : BaseMvpActivity<ScenicListView, ScenicListPresenter>(
         rlvList.addItemDecoration(RecyclerDivider(this))
         adapter = BaseAdapter()
                 .with(Scenic::class.java, ScenicBinder().clickWith({ item, _ ->
-                    IntentStart.startScenicDetail(this)
+                    val b = Bundle()
+                    b.putString(ScenicContant.SCENIC_ID, item.scenicId)
+                    b.putString(ScenicContant.SCENIC_NAME, item.businessName)
+                    IntentStart.startScenicDetail(this,b)
                 }))
         rlvList.adapter = adapter
 
