@@ -58,6 +58,10 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
         Log.i("DataApi", "ScenicDetail imageList " + data.imageList)
 
         scenicpic.setImageURI(data.imageList)
+        addressTv.text = data.address
+        phoneTv.text = data.linkNumber
+        infoTv.text = data.summary
+        trafficTv.text = data.traffic
 
     }
 }

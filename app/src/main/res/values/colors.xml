@@ -22,7 +22,7 @@
     <color name="bg_back_bg">#ffe7ecf0</color>
     <color name="text_plain">#fffefefe</color>
 
-    <color name="prev_next_month_day_color">#ff999999</color>
+    <color name="text_color_hint">#ff999999</color>
     <color name="comm_new_bg">#fff5f5f5</color>
     <color name="comm_main_text">#fffd8c26</color>
 

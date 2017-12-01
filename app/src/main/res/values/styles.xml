@@ -81,4 +81,28 @@
         <item name="android:layout_height">26.0dip</item>
     </style>
 
+    <style name="item_img_text_arr">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45.0dip</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="item_text_exp">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/vacation_filter_bg_pressed</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:lineSpacingExtra">7dip</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
 </resources>
