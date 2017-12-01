@@ -1,5 +1,6 @@
 package com.jack.tguide.scenic.detail
 
+import android.util.Log
 import com.jack.common.api.DataApi
 import com.jack.common.bean.Response
 import com.jack.common.bean.ScenicDetail
@@ -31,6 +32,7 @@ class ScenicPresenter : BaseMvpPresenter<ScenicView>() {
                     }
 
                     override fun onError(e: Throwable) {
+                        Log.i("onError", "ScenicDetail " + e.message)
                         if (isViewAttached()) getView()!!.showError(e.message)
                     }
 

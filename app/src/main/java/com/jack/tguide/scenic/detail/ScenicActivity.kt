@@ -6,6 +6,7 @@ import com.jack.common.bean.ScenicDetail
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseMvpActivity
 import com.jack.tguide.scenic.ScenicContant
+import kotlinx.android.synthetic.main.activity_scenic_detail.*
 import kotlinx.android.synthetic.main.title_view_white_with_divicer.*
 
 /**
@@ -54,7 +55,9 @@ class ScenicActivity : BaseMvpActivity<ScenicView, ScenicPresenter>(), ScenicVie
 
     override fun setData(data: ScenicDetail) {
         Log.i("DataApi", "ScenicDetail " + data.toString())
+        Log.i("DataApi", "ScenicDetail imageList " + data.imageList)
 
+        scenicpic.setImageURI(data.imageList)
 
     }
 }

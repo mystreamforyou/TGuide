@@ -20,5 +20,5 @@ data class ScenicDetail(
         @SerializedName("Traffic") val traffic: String,
         @SerializedName("MapUrl") val mapUrl: String,
         @SerializedName("OpeningHours") val openingHours: String,
-        @SerializedName("ImageList") val imageList: ArrayList<String>
+        @SerializedName("ImageList") val imageList: String
 )

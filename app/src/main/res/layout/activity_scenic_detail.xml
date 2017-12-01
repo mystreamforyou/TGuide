@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@+id/main_relLay"
                 xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@color/white">
@@ -12,11 +13,19 @@
             <ImageView android:layout_width="fill_parent"
                        android:layout_height="150.0dip"
                        android:background="@color/vacation_filter_bg_normal"
-                       android:scaleType="fitCenter" android:src="@drawable/view_logo"/>
-            <ImageView android:id="@+id/scenicpic" android:layout_width="fill_parent"
-                       android:layout_height="150.0dip" android:background="@color/transparent"
-                       android:onClick="scenicPhoto" android:scaleType="centerCrop"/>
-            <TextView android:id="@+id/photo_count_TextView" android:layout_width="wrap_content"
+                       android:scaleType="fitCenter"
+                       android:src="@drawable/view_logo"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@id/scenicpic"
+                android:layout_width="match_parent"
+                android:layout_height="150.0dip"
+                android:layout_marginTop="30.0dip"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_image_chang"/>
+
+            <TextView android:id="@+id/photo_count_TextView"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_alignBottom="@+id/scenicpic"
                       android:layout_alignRight="@+id/scenicpic"
