@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/vacation_evaluate_img_05"
+        android:drawablePadding="10dp"
+        android:text="景区"
+        android:textSize="16dp"/>
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/homeactivity_morestrategy"
+        android:text="更多"
+        android:textColor="@color/comm_main_text"
+        android:textSize="13dp"/>
+</RelativeLayout>

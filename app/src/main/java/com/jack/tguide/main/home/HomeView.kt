@@ -1,5 +1,6 @@
 package com.jack.tguide.main.home
 
+import com.jack.common.bean.Scenic
 import com.jack.tguide.mvp.BaseMvpView
 
 /**
@@ -10,6 +11,6 @@ import com.jack.tguide.mvp.BaseMvpView
  **/
 
 interface HomeView : BaseMvpView {
+    fun setData(datas: List<Scenic>)
 
-    
 }

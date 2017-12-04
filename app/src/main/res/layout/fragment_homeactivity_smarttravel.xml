@@ -5,7 +5,6 @@
               android:layout_height="wrap_content"
               android:background="@color/white"
               android:orientation="vertical">
-    <View style="@style/home_separat_horizontal"/>
     <LinearLayout android:layout_width="fill_parent" android:layout_height="75.0dip">
         <com.jack.tguide.view.SmartTraveView
             android:id="@id/rl_smarttravel_voiceexplain"
