@@ -3,6 +3,7 @@ package com.jack.tguide
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import com.jack.tguide.citylist.CityListActivity
 import com.jack.tguide.scenic.detail.ScenicActivity
 import com.jack.tguide.scenic.list.ScenicListActivity
 
@@ -22,7 +23,12 @@ object IntentStart {
 
     fun startScenicDetail(act: Activity, bundle: Bundle) {
         val i = Intent(act, ScenicActivity::class.java)
-        i.putExtra("bundle",bundle)
+        i.putExtra("bundle", bundle)
+        act.startActivity(i)
+    }
+
+    fun startCityList(act: Activity) {
+        val i = Intent(act, CityListActivity::class.java)
         act.startActivity(i)
     }
 

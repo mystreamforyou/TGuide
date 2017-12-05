@@ -29,4 +29,18 @@
     <color name="hide_provenance_color">#ff333333</color>
     <color name="home_text_gray">#ff666666</color>
     <color name="juhong_normal">#fff86616</color>
+
+    <color name="reflection_default_to">#00000000</color>
+    <color name="city_search_bg">#fff2f2f2</color>
+    <color name="city_item_letter_color">#ff8c8c8c</color>
+    <color name="city_item_text_color">#ff5c5c5c</color>
+    <color name="city_item_divider_color">#ffdddddc</color>
+    <color name="uniform_black">#ff161616</color>
+    <color name="uniform_light_gray">#ff787878</color>
+
+    <color name="line_gray">#ffd7d7d7</color>
+    <color name="deep_gray">#ff333333</color>
+    <color name="light_gray">#ff999999</color>
+    <color name="click_gray">#ffd9d9d9</color>
+    <color name="inner_divider">#ffe1e1e1</color>
 </resources>

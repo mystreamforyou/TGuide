@@ -1,6 +1,7 @@
 package com.jack.tguide
 
 import android.app.Application
+import android.content.Context
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.jack.common.rest.RestUtils
 import com.jack.common.utils.ScreenUtils
@@ -14,8 +15,13 @@ import com.jack.common.utils.ScreenUtils
 
 class App : Application() {
 
+    companion object {
+        var mContext: Context? = null
+    }
+
     override fun onCreate() {
         super.onCreate()
+        mContext = this
         ScreenUtils.init(this)
         RestUtils.init(this)
         Fresco.initialize(this)

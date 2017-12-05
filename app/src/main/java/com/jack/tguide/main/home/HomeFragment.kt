@@ -15,6 +15,7 @@ import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_functionmenu.*
+import kotlinx.android.synthetic.main.home_search.*
 import kotlinx.android.synthetic.main.view_list_header.*
 
 
@@ -55,6 +56,10 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
     private fun initListener() {
         tv_home_menu_tour.setOnClickListener {
             IntentStart.startScenicList(activity)
+        }
+
+        tv_homeactivity_city.setOnClickListener {
+            IntentStart.startCityList(activity)
         }
     }
 
