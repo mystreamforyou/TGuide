@@ -1,5 +1,6 @@
 package com.jack.tguide.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
@@ -9,6 +10,7 @@ import com.jack.tguide.IntentStart
 import com.jack.tguide.R
 import com.jack.tguide.base.BaseAdapter
 import com.jack.tguide.base.BaseMvpFragment
+import com.jack.tguide.citylist.CityListActivity
 import com.jack.tguide.scenic.ScenicContant
 import com.jack.tguide.view.RecyclerDivider
 import com.youth.banner.BannerConfig
@@ -59,7 +61,9 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
         }
 
         tv_homeactivity_city.setOnClickListener {
-            IntentStart.startCityList(activity)
+            //            IntentStart.startCityList(activity)
+            val i = Intent(activity, CityListActivity::class.java)
+            startActivityForResult(i, 2)
         }
     }
 
@@ -130,6 +134,13 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
         adapter.add(datas)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (data != null) {
+            tv_homeactivity_city.text = data.getStringExtra("city")
+        }
+    }
+
     override fun onPause() {
         super.onPause()
         banner.stopAutoPlay()
@@ -139,5 +150,4 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
         super.onResume()
         banner.startAutoPlay()
     }
-
 }

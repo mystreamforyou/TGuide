@@ -5,14 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -136,7 +135,7 @@ public class CityListActivity extends Activity {
         alphaIndexer = new HashMap<String, Integer>();
         handler = new Handler();
         overlayThread = new OverlayThread();
-        initOverlay();
+//        initOverlay();
         setAdapter(mCityNames);
         mCityLit.setOnItemClickListener(new CityListOnItemClick());
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -267,6 +266,7 @@ public class CityListActivity extends Activity {
                 Setting.Save2SharedPreferences(CityListActivity.this, "city",
                         cityModel.getCityName());
                 Intent intent = new Intent();
+                Log.i("CityListOnItemClick", " " + " cityModel " + cityModel.getCityName());
                 intent.putExtra("city", cityModel.getCityName());
                 setResult(2, intent);
                 finish();
@@ -372,23 +372,25 @@ public class CityListActivity extends Activity {
 
     // ’
     private void initOverlay() {
-        LayoutInflater inflater = LayoutInflater.from(this);
-        overlay = (TextView) inflater.inflate(R.layout.overlay, null);
-        overlay.setVisibility(View.INVISIBLE);
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
-                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_APPLICATION,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                        | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
-                PixelFormat.TRANSLUCENT);
-        windowManager = (WindowManager) this
-                .getSystemService(Context.WINDOW_SERVICE);
-        windowManager.addView(overlay, lp);
+//        LayoutInflater inflater = LayoutInflater.from(this);
+//        overlay = (TextView) inflater.inflate(R.layout.overlay, null);
+//        overlay.setVisibility(View.INVISIBLE);
+//        WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+//                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,
+//                WindowManager.LayoutParams.TYPE_APPLICATION,
+//                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+//                        | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+//                PixelFormat.TRANSLUCENT);
+//        windowManager = (WindowManager) this
+//                .getSystemService(Context.WINDOW_SERVICE);
+//        windowManager.addView(overlay, lp);
     }
 
     @Override
     protected void onDestroy() {
-        windowManager.removeView(overlay);
+        Log.i("citylist", " " + " onDestroy ");
+        locationClient.stop();
+//        windowManager.removeView(overlay);
         super.onDestroy();
     }
 
