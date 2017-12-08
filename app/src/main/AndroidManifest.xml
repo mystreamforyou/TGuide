@@ -48,7 +48,7 @@
         </service>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="请输入KEY"/>  <!--http://lbsyun.baidu.com/apiconsole/key-->
+            android:value="ymPrhsSOTW8lFet7f01GzGThm8kIbnLD"/>  <!--http://lbsyun.baidu.com/apiconsole/key-->
 
     </application>
 </manifest>
