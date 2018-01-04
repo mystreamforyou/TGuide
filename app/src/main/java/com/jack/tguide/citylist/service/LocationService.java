@@ -2,7 +2,6 @@ package com.jack.tguide.citylist.service;
 
 import android.content.Context;
 
-import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.location.LocationClientOption.LocationMode;
@@ -30,27 +29,7 @@ public class LocationService {
 		}
 	}
 	
-	/***
-	 * 
-	 * @param listener
-	 * @return
-	 */
-	
-	public boolean registerListener(BDAbstractLocationListener listener){
-		boolean isSuccess = false;
-		if(listener != null){
-			client.registerLocationListener(listener);
-			isSuccess = true;
-		}
-		return  isSuccess;
-	}
-	
-	public void unregisterListener(BDAbstractLocationListener listener){
-		if(listener != null){
-			client.unRegisterLocationListener(listener);
-		}
-	}
-	
+
 	/***
 	 * 
 	 * @param option

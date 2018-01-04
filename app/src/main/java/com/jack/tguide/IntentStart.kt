@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.jack.tguide.citylist.CityListActivity
+import com.jack.tguide.main.map.MapScenicsActivity
 import com.jack.tguide.scenic.detail.ScenicActivity
 import com.jack.tguide.scenic.list.ScenicListActivity
 
@@ -29,6 +30,12 @@ object IntentStart {
 
     fun startCityList(act: Activity) {
         val i = Intent(act, CityListActivity::class.java)
+        act.startActivity(i)
+    }
+
+
+    fun startScenicsMap(act: Activity) {
+        val i = Intent(act, MapScenicsActivity::class.java)
         act.startActivity(i)
     }
 

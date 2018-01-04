@@ -16,7 +16,7 @@
             app:stv_tit="@string/voiceexplain"/>
         <View style="@style/home_divider_vertical_new"/>
         <com.jack.tguide.view.SmartTraveView
-            android:id="@id/ll_smarttravel_smartmap"
+            android:id="@+id/smartmap"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"

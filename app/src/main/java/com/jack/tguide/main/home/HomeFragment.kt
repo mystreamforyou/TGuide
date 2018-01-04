@@ -17,6 +17,7 @@ import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home_functionmenu.*
+import kotlinx.android.synthetic.main.fragment_homeactivity_smarttravel.*
 import kotlinx.android.synthetic.main.home_search.*
 import kotlinx.android.synthetic.main.view_list_header.*
 
@@ -65,6 +66,10 @@ class HomeFragment : BaseMvpFragment<HomeView, HomePresenter>(), HomeView {
             val i = Intent(activity, CityListActivity::class.java)
             startActivityForResult(i, 2)
         }
+
+
+        smartmap.setOnClickListener { IntentStart.startScenicsMap(activity) }
+
     }
 
     private fun initView() {
