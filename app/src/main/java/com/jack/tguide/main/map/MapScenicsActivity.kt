@@ -34,17 +34,17 @@ class MapScenicsActivity : Activity() {
     private var mInfoWindow: InfoWindow? = null
 
     // 初始化全局 bitmap 信息，不用时及时 recycle
-    internal var bdA = BitmapDescriptorFactory
+    private var bdA = BitmapDescriptorFactory
             .fromResource(R.drawable.icon_marka)
-    internal var bdB = BitmapDescriptorFactory
+    private var bdB = BitmapDescriptorFactory
             .fromResource(R.drawable.icon_markb)
-    internal var bdC = BitmapDescriptorFactory
+    private var bdC = BitmapDescriptorFactory
             .fromResource(R.drawable.icon_markc)
-    internal var bdD = BitmapDescriptorFactory
+    private var bdD = BitmapDescriptorFactory
             .fromResource(R.drawable.icon_markd)
-    internal var bd = BitmapDescriptorFactory
+    private var bd = BitmapDescriptorFactory
             .fromResource(R.drawable.icon_gcoding)
-    internal var bdGround = BitmapDescriptorFactory
+    private var bdGround = BitmapDescriptorFactory
             .fromResource(R.drawable.ground_overlay)
 
     public override fun onCreate(savedInstanceState: Bundle?) {
