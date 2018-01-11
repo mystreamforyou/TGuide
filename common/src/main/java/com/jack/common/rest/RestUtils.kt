@@ -29,7 +29,7 @@ object RestUtils {
 
     private val HTTP_READ_TIMEOUT = HTTP_CONNECT_TIMEOUT
 
-    private const val HOST_GANK: String = "http://localhost:63343/"
+    private const val HOST_GANK: String = "http://39.107.75.219/tguide/"
     var retrofitInstance: Retrofit? = null
     var CONTEXT: Context? = null
     var CLIENT: OkHttpClient? = null
