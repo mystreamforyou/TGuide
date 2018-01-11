@@ -15,6 +15,26 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file('./keyStore/news_jack_key.jks')      //签名文件
+            storePassword "123456"
+            keyAlias "jack"
+            keyPassword "123456"  //签名密码
+            v2SigningEnabled true
+        }
+
+        release {
+            storeFile file('./keyStore/news_jack_key.jks')      //签名文件
+            storePassword "123456"
+            keyAlias "jack"
+            keyPassword "123456"  //签名密码
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
