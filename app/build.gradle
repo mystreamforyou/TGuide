@@ -19,7 +19,7 @@ android {
     //签名
     signingConfigs {
         debug {
-            storeFile file('./keyStore/news_jack_key.jks')      //签名文件
+            storeFile file('../keyStore/news_jack_key.jks')      //签名文件
             storePassword "123456"
             keyAlias "jack"
             keyPassword "123456"  //签名密码
@@ -27,7 +27,7 @@ android {
         }
 
         release {
-            storeFile file('./keyStore/news_jack_key.jks')      //签名文件
+            storeFile file('../keyStore/news_jack_key.jks')      //签名文件
             storePassword "123456"
             keyAlias "jack"
             keyPassword "123456"  //签名密码
