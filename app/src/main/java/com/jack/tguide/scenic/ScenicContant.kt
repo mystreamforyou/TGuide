@@ -7,7 +7,7 @@ package com.jack.tguide.scenic
  * Date       : 2017/11/30
  **/
 
-object ScenicContant {
+object ScenicContant  {
 
     val SCENIC_ID: String = "scenic_id"
     val SCENIC_NAME: String = "scenic_name"
